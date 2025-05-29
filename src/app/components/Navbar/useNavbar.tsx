@@ -5,7 +5,7 @@ export interface Shortcut {
   label: string;
   sectionId?: string;
   action?: () => void;
-  active?: boolean; // nova propriedade para controle de destaque
+  active?: boolean;
 }
 
 const initialShortcuts: Shortcut[] = [
