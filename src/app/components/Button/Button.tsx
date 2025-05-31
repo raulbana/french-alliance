@@ -4,7 +4,7 @@ import useButton from "./useButton";
 export type ButtonType = "PRIMARY" | "SECONDARY" | "TERTIARY";
 export type ButtonSize = "SMALL" | "MEDIUM" | "LARGE";
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   onClick: () => void;
   type?: ButtonType;
