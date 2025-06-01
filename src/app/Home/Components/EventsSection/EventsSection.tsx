@@ -16,7 +16,7 @@ const EventsSection: React.FC = () => {
       </h2>
       <div className="grid grid-cols-3 gap-4 w-full max-w-6xl px-4">
         {eventsCards.map((card, index) => (
-          <BorderlessVerticalCard key={card.title} {...card} />
+          <BorderlessVerticalCard key={`${card.title}-${index}`} {...card} />
         ))}
       </div>
     </section>

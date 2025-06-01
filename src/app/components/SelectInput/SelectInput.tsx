@@ -2,9 +2,14 @@
 
 import React from "react";
 
+export interface SelectInputOption {
+  value: string | number;
+  label: string;
+}
+
 export interface SelectInputProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  options: Array<{ value: any; label: string }>;
+  options: SelectInputOption[];
   value?: string;
   placeholder?: string;
   disabled?: boolean;
