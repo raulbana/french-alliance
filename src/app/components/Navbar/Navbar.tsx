@@ -7,7 +7,8 @@ import useNavbar from "./useNavbar";
 import Button from "../Button/Button";
 
 const Navbar = () => {
-  const { shortcuts } = useNavbar();
+  const { shortcuts, isLoggedIn, navigateToLogin, user, loading, logout } =
+    useNavbar();
 
   return (
     <nav className="flex flex-row w-full bg-french-red px-4 py-2 gap-8 justify-between items-center">
@@ -22,22 +23,32 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-row gap-6">
           {shortcuts.map((shortcut) => (
-            <li
-              key={shortcut.id}
-              className="text-french-white cursor-pointer hover:text-slate-300"
-              onClick={shortcut.action}
-            >
-              {shortcut.label}
+            <li key={shortcut.id}>
+              <button
+                type="button"
+                className="text-french-white cursor-pointer hover:text-slate-300 bg-transparent border-none p-0 m-0"
+                onClick={shortcut.action}
+              >
+                {shortcut.label}
+              </button>
             </li>
           ))}
         </ul>
       </div>
       <div className="flex flex-row items-center gap-4">
-        <Button
-          label="Login"
-          onClick={() => console.log("Logging in...")}
-        />
-        <Button label="Contato" onClick={() => console.log("Signing up...")} />
+        {!loading && (
+          <>
+            {isLoggedIn || user ? (
+              <Button label="Logout" onClick={logout} />
+            ) : (
+              <Button label="Login" onClick={navigateToLogin} />
+            )}
+            <Button
+              label="Contato"
+              onClick={() => console.log("Signing up...")}
+            />
+          </>
+        )}
       </div>
     </nav>
   );

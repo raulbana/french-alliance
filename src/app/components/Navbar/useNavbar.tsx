@@ -1,3 +1,4 @@
+import { useAuth } from "@/app/contexts/auth";
 import { useState, useEffect } from "react";
 
 export interface Shortcut {
@@ -46,6 +47,8 @@ const useNavbar = () => {
     initialShortcuts.map((s) => ({ ...s, active: false }))
   );
 
+  const { isLoggedIn, user, loading, logout } = useAuth();
+
   const handleShortcutClick = (shortcut: Shortcut) => {
     if (shortcut.sectionId) {
       const section = document.getElementById(shortcut.sectionId);
@@ -73,9 +76,18 @@ const useNavbar = () => {
     });
   }, []);
 
+  const navigateToLogin = () => {
+    window.location.href = "/authentication/login";
+  };
+
   return {
     shortcuts,
     handleShortcutClick,
+    isLoggedIn,
+    navigateToLogin,
+    user,
+    loading,
+    logout
   };
 };
 

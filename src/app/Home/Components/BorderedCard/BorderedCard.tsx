@@ -1,6 +1,5 @@
 import Button from "@/app/components/Button/Button";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 export interface BorderedCardProps {
