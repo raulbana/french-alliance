@@ -1,7 +1,7 @@
 import { BorderedCardProps } from "../BorderedCard/BorderedCard";
 
 import CursoRegular from "@/assets/cuso regular_.png";
-import CursoConversacao from "@/assets/curso de conversação.png";
+import CursoConversacao from "@/assets/curso_conversacao.png";
 import CursoArteLiteratura from "@/assets/curso de arte e literatura.png";
 import Enfants from "@/assets/enfants.png";
 import Ados from "@/assets/ados.png";
