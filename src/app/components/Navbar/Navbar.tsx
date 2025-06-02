@@ -26,7 +26,7 @@ const Navbar = () => {
             <li key={shortcut.id}>
               <button
                 type="button"
-                className="text-french-white cursor-pointer hover:text-slate-300 bg-transparent border-none p-0 m-0"
+                className="text-french-white cursor-pointer hover:text-slate-300 hover:underline bg-transparent border-none p-0 m-0"
                 onClick={shortcut.action}
               >
                 {shortcut.label}

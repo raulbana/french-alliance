@@ -1,31 +1,48 @@
-import { BorderlessVerticalCardProps } from "../BorderlessVerticalCard/BorderlessVerticalCard";
-import FrancePlaceHolder from "../../../../assets/france-placeholder.jpeg";
+import { BorderedCardProps } from "../BorderedCard/BorderedCard";
+
+import Evento80Anos from "@/assets/EVENTOS-80 ANOS.jpg";
+import EventoPrudente from "@/assets/EVENTOS-PRUDENTE.jpg";
+import EventoFrancofonia from "@/assets/EVENTOS-FRANCOFONIA.jpg";
+import EventoChandeleur from "@/assets/crepes eventos.jpg";
+import Evento14Juillet from "@/assets/14 de julho eventos fete.jpg";
+import EventoAtelier from "@/assets/EVENTOS-ARELIÊ ONLINE.jpg";
 
 const useEventsSection = () => {
-  const eventsCards: BorderlessVerticalCardProps[] = [
+  const events: BorderedCardProps[] = [
     {
-      title: "Blog AF Curitiba",
+      title: "80 anos da Aliança Francesa",
       content:
-        "Fique por dentro das novidades culturais de Curitiba e França através do nosso site. Por aqui você explora eventos, shows, exposições e atrações culturais, c’est magnifique!",
-      imageUrl: FrancePlaceHolder,
-      onClick: () => console.log("Clicou em: Blog AF Curitiba"),
+        "Celebre os 80 anos da Aliança Francesa em Curitiba com a gente.",
+      imageUrl: Evento80Anos,
     },
     {
-      title: "Cineclube AF Curitiba",
-      content:
-        "Imagina experimentar um pedacinho da França aqui em Curitiba? Conheça o cineclube, um evento gratuito que abrange diversas obras cinematográficas francesas. Confira a nossa programação.",
-      imageUrl: FrancePlaceHolder,
-      onClick: () => console.log("Clicou em: Cineclube AF Curitiba"),
+      title: "Prudente Cultural",
+      content: "Participe da Prudente Cultural neste sábado (25).",
+      imageUrl: EventoPrudente,
     },
     {
-      title: "Prix Photo 2025",
-      content:
-        "Vem aí a 14ª edição do Prix Photo Aliança Francesa! Um dos concursos mais importantes da fotografia contemporânea no Brasil está com inscrições abertas, não perca!",
-      imageUrl: FrancePlaceHolder,
-      onClick: () => console.log("Clicou em: Prix Photo 2025"),
+      title: "Francofonia",
+      content: "Confira a semana da Francofonia em 2025.",
+      imageUrl: EventoFrancofonia,
+    },
+    {
+      title: "Chandeleur",
+      content: "Conheça a festa onde se come crepes!",
+      imageUrl: EventoChandeleur,
+    },
+    {
+      title: "Julho à la Française",
+      content: "Joyeuse Fête Nationale 14 Juillet !",
+      imageUrl: Evento14Juillet,
+    },
+    {
+      title: "Atelier",
+      content: "Aqueça o seu francês nos ateliês online de verão.",
+      imageUrl: EventoAtelier,
     },
   ];
-  return { eventsCards };
+
+  return { events };
 };
 
 export default useEventsSection;

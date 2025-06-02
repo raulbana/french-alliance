@@ -15,7 +15,7 @@ const CoursesSection: React.FC = () => {
       </h2>
       <div className="grid grid-cols-3 gap-4 w-full max-w-6xl px-4">
         {coursesCards.map((card, index) => (
-          <BorderedCard key={index} {...card} />
+          <BorderedCard key={`${card.title}-${index}`} {...card} titleColor="text-french-white" contentColor="text-french-white" borderColor="border-2 border-blue-700" />
         ))}
       </div>
     </section>
