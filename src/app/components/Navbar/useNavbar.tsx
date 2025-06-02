@@ -23,7 +23,7 @@ const initialShortcuts: Shortcut[] = [
   {
     id: "courses",
     label: "Cursos",
-    sectionId: "courses-section",
+    action: () => (window.location.href = "/courses"),
   },
   {
     id: "exams",
@@ -38,7 +38,7 @@ const initialShortcuts: Shortcut[] = [
   {
     id: "events",
     label: "Eventos",
-    action: () => window.location.href = "/events",
+    action: () => (window.location.href = "/events"),
   },
 ];
 
@@ -87,7 +87,7 @@ const useNavbar = () => {
     navigateToLogin,
     user,
     loading,
-    logout
+    logout,
   };
 };
 
