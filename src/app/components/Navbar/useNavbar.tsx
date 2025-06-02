@@ -38,7 +38,7 @@ const initialShortcuts: Shortcut[] = [
   {
     id: "events",
     label: "Eventos",
-    sectionId: "events-section",
+    action: () => window.location.href = "/events",
   },
 ];
 

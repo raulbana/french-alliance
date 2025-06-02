@@ -7,6 +7,11 @@ export interface BorderedCardProps {
   content?: string;
   imageUrl?: string | StaticImageData;
   onClick?: () => void;
+  titleColor?: string;
+  contentColor?: string;
+  backgroundColor?: string;
+  borderColor?: string;
+  extraClasses?: string;
 }
 
 const BorderedCard = ({
@@ -14,18 +19,36 @@ const BorderedCard = ({
   content,
   imageUrl,
   onClick,
+  titleColor = "text-french-blue",
+  contentColor = "text-french-black",
+  backgroundColor = "bg-transparent",
+  borderColor = "border-blue-700",
+  extraClasses,
 }: BorderedCardProps) => {
   return (
-    <div className="flex flex-col p-4 gap-4 border border-blue-700 rounded-lg">
+    <div
+      className={`flex flex-col p-4 gap-4 border rounded-lg ${backgroundColor} ${borderColor} ${extraClasses}`}
+    >
       {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt={`card-image-${title}`}
-          className="rounded-xl"
-        />
+        <div
+          className="flex justify-center items-center rounded-lg overflow-hidden w-full"
+          style={{ height: 180 }}
+        >
+          <Image
+            src={imageUrl}
+            alt={`card-image-${title}`}
+            className="rounded-xl object-cover w-full h-full"
+            style={{
+              width: "100%",
+              height: "100%",
+              maxHeight: 180,
+              objectFit: "cover",
+            }}
+          />
+        </div>
       )}
-      <h2 className="text-lg font-semibold text-french-white">{title}</h2>
-      <p className="text-sm text-french-white">{content}</p>
+      <h2 className={`text-lg font-semibold ${titleColor}`}>{title}</h2>
+      <p className={`text-sm ${contentColor}`}>{content}</p>
       {onClick && (
         <div className="flex flex-1 justify-end items-end">
           <Button label={"Saiba mais"} type="SECONDARY" onClick={onClick} />
