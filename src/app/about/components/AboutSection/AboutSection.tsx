@@ -4,11 +4,11 @@ import useAboutContent from "../../hooks/useAboutContent";
 const AboutSection = () => {
   const { aboutText } = useAboutContent();
   return (
-    <section className="w-full max-w-3xl mx-auto mb-8">
-      <h2 className="text-2xl md:text-3xl text-french-red font-bold text-center mb-4">
+    <section className="w-full bg-french-blue py-10 px-2 flex flex-col items-center">
+      <h2 className="text-2xl md:text-3xl text-french-white font-bold text-center mb-4">
         Sobre nós
       </h2>
-      <div className="text-base md:text-lg text-center text-french-blue whitespace-pre-line">
+      <div className="text-base md:text-lg text-center text-french-white max-w-4xl">
         {aboutText}
       </div>
     </section>
