@@ -19,7 +19,7 @@ const TestimonialsSection: React.FC = () => {
         <div className="flex items-center">
           <button
             type="button"
-            className="rounded-full border-2 border-french-red p-2 hover:bg-french-red hover:text-white transition"
+            className="rounded-full border-2 border-french-red p-2 cursor-pointer hover:bg-french-red hover:text-white transition"
             aria-label="Próximo depoimento"
           >
             <ArrowRight size={28} weight="bold" />

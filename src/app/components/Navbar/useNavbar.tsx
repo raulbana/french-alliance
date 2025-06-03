@@ -13,12 +13,7 @@ const initialShortcuts: Shortcut[] = [
   {
     id: "about-us",
     label: "Sobre nós",
-    action: () => console.log("Navigating to Sobre nós"),
-  },
-  {
-    id: "agenda",
-    label: "Agenda",
-    action: () => console.log("Navigating to Agenda"),
+    action: () => (window.location.href = "/about"),
   },
   {
     id: "courses",
@@ -28,12 +23,12 @@ const initialShortcuts: Shortcut[] = [
   {
     id: "exams",
     label: "Exames",
-    action: () => console.log("Navigating to Exames"),
+    action: () => (window.location.href = "/exams"),
   },
   {
     id: "level-test",
     label: "Teste de nível",
-    action: () => console.log("Navigating to Teste de nível"),
+    action: () => (window.location.href = "/level-test"),
   },
   {
     id: "events",
@@ -46,6 +41,10 @@ const useNavbar = () => {
   const [shortcuts, setShortcuts] = useState<Shortcut[]>(
     initialShortcuts.map((s) => ({ ...s, active: false }))
   );
+
+  const onNavigateToHome = () => {
+    window.location.href = "/";
+  };
 
   const { isLoggedIn, user, loading, logout } = useAuth();
 
@@ -88,6 +87,7 @@ const useNavbar = () => {
     user,
     loading,
     logout,
+    onNavigateToHome,
   };
 };
 
