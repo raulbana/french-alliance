@@ -29,7 +29,7 @@ const Courses = () => {
                 <h2 className="text-lg md:text-xl font-bold text-french-white mb-1">
                   {course.title}
                 </h2>
-                <p className="text-sm md:text-base text-french-white whitespace-pre-line mb-2">
+                <p className="text-sm text-balance md:text-base text-french-white whitespace-pre-line mb-2">
                   {course.description}
                 </p>
               </div>

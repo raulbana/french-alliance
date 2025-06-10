@@ -15,6 +15,7 @@ const Navbar = () => {
     loading,
     logout,
     onNavigateToHome,
+    onNavigateToFooter,
   } = useNavbar();
 
   return (
@@ -53,10 +54,7 @@ const Navbar = () => {
             ) : (
               <Button label="Login" onClick={navigateToLogin} />
             )}
-            <Button
-              label="Contato"
-              onClick={() => console.log("Signing up...")}
-            />
+            <Button label="Contato" onClick={onNavigateToFooter} />
           </>
         )}
       </div>

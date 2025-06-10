@@ -9,7 +9,7 @@ const ExamCard: React.FC<{ exam: ExamInfo }> = ({ exam }) => (
     <h2 className="text-base md:text-lg font-bold text-french-red mb-1">
       {exam.title}
     </h2>
-    <p className="text-sm md:text-base text-french-blue mb-2">
+    <p className="text-sm md:text-base text-french-blue mb-2 text-balance">
       {exam.description}
     </p>
     <div className="mb-1">

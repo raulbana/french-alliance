@@ -9,7 +9,7 @@ import ExamsSection from "./Components/ExamsSection/ExamsSection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen gap-12 pt-5">
+    <div className="flex flex-col items-center min-h-screen gap-12 pt-12">
       <div className="flex w-full items-center justify-center p-4">
         <Image src={AFRed} width={96} height={96} alt="Aliança Francesa" />
         <h1 className="text-5xl text-french-red font-bold">Aliança Francesa</h1>

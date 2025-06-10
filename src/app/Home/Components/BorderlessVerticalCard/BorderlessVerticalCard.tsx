@@ -26,7 +26,7 @@ const BorderlessVerticalCard = ({
         </div>
       )}
       <h2 className="text-lg font-semibold text-french-blue">{title}</h2>
-      <p className="text-sm text-french-blue">{content}</p>
+      <p className="text-sm text-french-blue text-balance">{content}</p>
     </div>
   );
 };

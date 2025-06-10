@@ -75,6 +75,13 @@ const useNavbar = () => {
     });
   }, []);
 
+  const onNavigateToFooter = () => {
+    const footer = document.getElementById("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navigateToLogin = () => {
     window.location.href = "/authentication/login";
   };
@@ -88,6 +95,7 @@ const useNavbar = () => {
     loading,
     logout,
     onNavigateToHome,
+    onNavigateToFooter,
   };
 };
 

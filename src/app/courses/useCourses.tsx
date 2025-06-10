@@ -7,7 +7,7 @@ const useCourses = () => {
     {
       title: "Curso Regular",
       description:
-        "Os cursos regulares de francês têm uma carga total de 54 horas, complementadas por 6 horas extras dedicadas a atividades como aulas de revisão individuais e em grupo, além de consultorias para quem deseja estudar em países francófonos.\n\nO objetivo é oferecer uma formação completa e equilibrada, que permita ao aluno desenvolver todas as habilidades do idioma de forma prática, com uma carga horária semanal flexível, facilitando a conciliação com outras atividades do dia a dia.",
+        "Os cursos regulares de francês têm uma carga total de 54 horas, complementadas por 6 horas extras dedicadas a atividades como aulas de revisão individuais e em grupo, além de consultorias para quem deseja estudar em países francófonos.\n\nO objetivo é oferecer uma formação completa e equilibrada, que permita ao aluno desenvolver todas as habilidades do idioma de forma prática, com uma carga horária semanal flexível, facilitando a conciliação com outras\natividades do dia a dia.",
       info: "Informações: 1 módulo = 54h/aula\nDuração de 3 meses",
       image: CursoRegular,
     },
