@@ -37,7 +37,13 @@ const Courses = () => {
                 <span className="text-xs md:text-sm text-french-white whitespace-pre-line">
                   {course.info}
                 </span>
-                <Button label={"Inscrever-se"} onClick={() => {}} type="SECONDARY" />                
+                <Button
+                  label={"Inscrever-se"}
+                  onClick={() => {
+                    window.location.href = "/authentication/login";
+                  }}
+                  type="SECONDARY"
+                />
               </div>
             </div>
           </div>
