@@ -14,12 +14,14 @@ const LevelTestCard: React.FC<LevelTestCardProps> = ({ level }) => (
         <li key={idx}>{item}</li>
       ))}
     </ul>
-    <Button
-      label="Fazer teste"
-      type="SECONDARY"
-      onClick={() => window.open(level.link, "_blank")}
-      className="self-end"
-    />
+    <div className="flex flex-1 justify-end">
+      <Button
+        label="Fazer teste"
+        type="SECONDARY"
+        onClick={() => window.open(level.link, "_blank")}
+        className="self-end"
+      />
+    </div>
   </div>
 );
 
